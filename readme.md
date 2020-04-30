@@ -15,7 +15,7 @@ bit ineffective in size, but makes enduse blazing fast
 
 + git clone
 + del generated.json _(for clean result)_
-+ python3 reittiopas.py _(reirriopas.json must be present in same directory)
++ python3 reittiopas.py _(reittiopas.json must be present in same directory)
 + python3 -m http.server 8000
 + http://127.0.0.1:8000 
 
