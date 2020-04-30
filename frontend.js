@@ -41,7 +41,7 @@ function update()
     var $wherefrom=$("#from");
     var $whereto=$("#to");
     $display.text('');
-    $display.append('<b>Paras reitti:</b><br>');
+    $display.append('<b>Possible path from fastest to slowest:</b><hr><br>');
     $.each(json_data,
       function (key,value){
         if (key==($wherefrom.val()+$whereto.val())){
@@ -50,6 +50,10 @@ function update()
       }
     );
     pathes=sortOnKeys(pathes);
+    if(Object.keys(pathes).length==0){
+      $display.append('<b><i>No routes for given destination</i></b><hr><br>')
+    };
+
     $.each(pathes,
       function (key,value){
         $display.append('Time to travel: '+value[0]+'</br>');
@@ -58,23 +62,25 @@ function update()
           function(k1,v1){
             switch(v1[1]) {
               case 'vi':
-                clr='green'
+                clr='Lime'
               break;
               case 'si':
-                clr='blue'
+                clr='Aqua'
               break;
               case 'pu':
-                clr='red'
+                clr='Coral'
               break;
               case 'ke':
                 clr='yellow'
               default:
                 clr='black'
               };
-              console.log(clr);
-              $display.append(v1[0]);
+              $display.append('<font style="background-color:'+clr+'">'+v1[0]+'</font>');
+
           }
         );
-        $display.append('<br>');
+        $display.append('<hr><br>');
       });
+  $display.append('<b>End of possible routes</b>');
+  pathes={};
 }
