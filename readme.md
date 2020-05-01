@@ -25,7 +25,8 @@ More proper way would be serving _pathes_ from dynamic server, which has _genera
 
 Size complexity is N(N-1), thus O(N²) for size, where N is size of output, at minimum. 
 Can be larger, but algorithmic complexity isn't quite part of a challenge, neither size optimization is adequate here.
-Speed is immediate, but could be optimized as described above.
+
+Speed is immediate O(1), but could be optimized as described above.
 
 ### Screenshot
 
