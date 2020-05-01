@@ -89,8 +89,10 @@ function update() {
               break;
             case 'ke':
               clr = 'yellow'
+              break;
             default:
-              clr = 'black'
+              console.log(v1[1]);
+              clr = 'gray';
           };
           $display.append('<font style="background-color:' + clr + '">' + v1[0] + '</font>');
 
