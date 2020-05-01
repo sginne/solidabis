@@ -23,7 +23,8 @@ bit ineffective in size, but makes enduse blazing fast
 System is still ineffective, because heavy _generated.json_ is completely loaded to client.
 More proper way would be serving _pathes_ from dynamic server, which has _generated.json_ as a backbone for serving exact pathes.
 
-Size complexity is N(N-1), thus O² for size.
+Size complexity is N(N-1), thus O(N²) for size, where N is size of output, at minimum. 
+Can be larger, but algorithmic complexity isn't quite part of a challenge, neither size optimization is adequate here.
 Speed is immediate, but could be optimized as described above.
 
 ### Screenshot
