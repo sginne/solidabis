@@ -21,7 +21,7 @@ bit ineffective in size, but makes enduse blazing fast
 
 ### Comments
 
-* I assume edges are onedirectional, shouldn't be a problem to make doubledirectional edges. *
+** I assume edges are onedirectional, shouldn't be a problem to make doubledirectional edges. **
 
 System is still ineffective, because heavy _generated.json_ is completely loaded to client.
 More proper way would be serving _pathes_ from dynamic server, which has _generated.json_ as a backbone for serving exact pathes.
